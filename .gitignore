@@ -44,6 +44,10 @@
 # Generated output files
 /Listings/*
 /Objects/*
+/Output/*
+Listings
+Objects
+Output
 
 # Debugger files
 # define exception below if needed
