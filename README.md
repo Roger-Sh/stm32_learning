@@ -600,9 +600,45 @@
 #### 新建工程
 
 -   目录
-    -   LED
-        -   Listing
-        -   Output
-        -   startip_stm32f10x_hd.s
-        -   stm32f10x.h
-        -   main.c
+    
+    -   新建工程 REG-LED
+    
+        -   CPU型号  STM32F103VE
+    
+        -   拷贝三个文件
+            -   startip_stm32f10x_hd.s
+                -   系统上电后第一个运行的程序，由汇编编写
+                -    从固件库里面拷贝而来由官方提供
+            -   stm32f10x.h
+                -   用户手动新建，用于存放寄存器映射的代码
+            -   main.c
+                -   用户手动新建，用于存放 main 函数
+    
+        -   配置魔术棒选项
+            -   Target
+                -   Use MicroLIB
+            -   Output
+                -   select folder
+                -   create hex file
+            -   Listing
+                -   select folder
+            -   Debug
+                -   Use CMSIS DAP Debuger
+                -   Settings
+                    -   Debug
+                        -   FIRE CMSIS-DAP
+                    -   SWJ SW 5MHZ
+                    -   Reset
+                        -   Autodetect / SYSRESETREQ
+                    -   Flash Download
+                        -   Erase section
+                        -   Program
+                        -   Verify
+                        -   Reset and Run
+            -   Utilities
+                -   Use Debug Driver
+
+
+
+-   Build/Rebuild
+-   Download
